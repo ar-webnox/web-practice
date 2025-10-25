@@ -14,6 +14,8 @@ body {
 .main-heading {
     border: 2px solid black;
     box-shadow: 0 0 5px black;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
     border-radius: 0.3em;
     padding: 5px;
     text-align: center;
@@ -22,8 +24,8 @@ body {
 }
 
 .main-heading:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .heading {
@@ -341,4 +343,96 @@ input[type=text] {
     border: 2px solid black;
     text-align: center;
     padding: min(130px, 5%);
+}
+
+.flex-container {
+    display: flex;
+    gap: 1em;
+}
+
+.flex-container .cards {
+    /* width: 230px; */
+    max-width: 230px;
+    /* height: 300px; */
+    border: 4px double white;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex: 1;
+}
+
+.flex-container .cards h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+
+}
+.flex-container .cards p {
+    display: block;
+    font-size: 1rem;
+
+    flex-grow: 1;
+}
+.flex-container .cards button {
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.grid-container .cards {
+    /* width: 230px; */
+    max-width: 230px;
+    /* height: 300px; */
+    border: 4px double white;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1em;
+}
+
+.grid-container .cards h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+
+}
+.grid-container .cards p {
+    display: block;
+    font-size: 1rem;
+}
+.grid-container .cards button {
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.grid-card {
+    width: min(600px, 95%);
+    border: 3px double black;
+    padding: 1em;
+}
+
+.tag {
+    display: inline-block;
+    padding: .5em 1em;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    margin-bottom: .4em;
 }
