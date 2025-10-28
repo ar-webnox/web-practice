@@ -372,12 +372,14 @@ input[type=text] {
     margin: 0;
 
 }
+
 .flex-container .cards p {
     display: block;
     font-size: 1rem;
 
     flex-grow: 1;
 }
+
 .flex-container .cards button {
     width: 100%;
     height: 2rem;
@@ -412,27 +414,120 @@ input[type=text] {
     margin: 0;
 
 }
+
 .grid-container .cards p {
     display: block;
     font-size: 1rem;
 }
+
 .grid-container .cards button {
     width: 100%;
     height: 2rem;
     border-radius: 5px;
 }
 
+.flex-card {
+    width: min(600px, 95%);
+    border: 3px double black;
+    padding: 1em;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4em;
+}
+
+.tag1 {
+    /* display: inline-block; */
+    padding: .5em 1em;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    /* margin-bottom: .4em; */
+}
+
 .grid-card {
     width: min(600px, 95%);
     border: 3px double black;
     padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: .4em;
 }
 
-.tag {
+.tag2 {
     display: inline-block;
     padding: .5em 1em;
     border: 2px solid black;
     background-color: black;
     color: white;
-    margin-bottom: .4em;
 }
+
+.img-resize {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    box-shadow: 0 0 10px black;
+}
+
+.img-resize-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    /* resize: vertical; */
+    resize: both;
+    border: 1px solid #444;
+}
+
+.img-resize-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container1 {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.text-container1 h1 {
+    display: inline-block;
+    font-weight: 900;
+    background: linear-gradient(to right, black, rgb(80, 80, 80));
+    background-clip: text;
+    background-size: 200%;
+    transform: scaleY(1.2);
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+    transition: all 3s;
+}
+
+.text-container1 h1:hover {
+    transition: all 3s;
+    animation: textAnimation 1s ease alternate-reverse infinite,
+                textColorAnimation 6s ease infinite;
+}
+
+@keyframes textAnimation {
+    0% {
+        transform: scale(1.1) scaleY(1.1);
+    }
+    
+    100% {
+        transform: scale(1) scaleY(1.1);
+    }
+}
+@keyframes textColorAnimation {
+    0% {
+        background-size: 0%;
+    }
+    
+    100% {
+        background-size: 200%;
+    }
+}
+
+/* FAQ QnA */
